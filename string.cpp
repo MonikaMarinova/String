@@ -220,7 +220,7 @@ unsigned String::find(const String& str, unsigned pos){
 return i-strlen(str);
 }
 
-usigned String::find_firs_of(const String& str, pos){
+usigned String::find_first_of(const String& str, pos){
     for(int i=pos;i<capasity_-pos;i++)
         for(int j=0;j<strlen(str);j++)
         {
@@ -288,7 +288,7 @@ Iterator Iterator::begin(){
     }while(clone.str[index]!='\0');
 }
 
-Iterator Iterator::begin(){
+Iterator Iterator::end(){
     Iterator clone(*this);
       do{
         index++;
