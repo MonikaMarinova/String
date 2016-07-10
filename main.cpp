@@ -52,7 +52,7 @@ String str=str1+str2;
 cout<<"concatenation: <"<<str<<">"<<endl;
 
 //9
-cout<<"voncatenation lenght: "<<str.lenght()<<endl;
+cout<<"concatenation lenght: "<<str.lenght()<<endl;
 
 //11
 for(int i=0;i<str.lenght();i++){
