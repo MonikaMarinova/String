@@ -188,6 +188,12 @@ void String::push_back(char ch){
 String String::operator+(const String& other){
     int firstIndex=this->size_;
     int secondIndex=0;
+    for(;;)
+        if(this->size_+other.size_<this->capasity_)
+        {
+            capasity_=2*capasity_;
+            break;
+        }
 
     do
     {
@@ -200,6 +206,12 @@ String String::operator+(const String& other){
 
 String String::operator+(const String& s1,const String& s2){
     int firstIndex=strlen(s1), secondIndex=0;
+    for(;;)
+            if(this->size_+other.size_<this->capasity_)
+            {
+                capasity_=2*capasity_;
+                break;
+            }
 
     do
     {
@@ -281,11 +293,7 @@ class Iterator{
 
 Iterator Iterator::begin(){
     Iterator clone(*this);
-    int index=clone.index;
-    do{
-        index++;
-        return clone;
-    }while(clone.str[index]!='\0');
+   returnt clone[0];
 }
 
 Iterator Iterator::end(){
